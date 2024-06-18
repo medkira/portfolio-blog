@@ -77,7 +77,7 @@ export const Navbar = () => {
                   '',
                   {
                     'text-[1rem] font-thin': pathname !== item.href,
-                    'text-[1rem] font-bold  text-blue-600':
+                    'text-[1rem] font-bold  text-amber-200':
                       pathname === item.href,
                   },
                 )}

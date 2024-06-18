@@ -329,7 +329,7 @@ const Footer = () => {
             <h1 className={title({ className: 'pt-6', size: 'md' })}>
               About Us
             </h1>
-            <section className=" w-[80vw] sm:w-[50vw]">
+            <section className="w-[80vw] pt-5 sm:w-[90vw]">
               <Accordion>
                 <AccordionItem
                   key="1"
