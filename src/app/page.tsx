@@ -154,12 +154,6 @@ const Section1 = () => {
               figure out when your mind and body naturally work the best.
             </h2>
           </div>
-          {/* <div>
-            {' '}
-            <Button className="mt-6 rounded-md bg-black p-7 text-lg">
-              See our big sale
-            </Button>
-          </div> */}
         </div>
         <div className="white mt-14">
           <Image
@@ -206,7 +200,7 @@ const Section2 = () => {
        flex  w-full flex-col items-start 
       gap-4 overflow-hidden rounded-md
          bg-[#F5F5F5] px-6 pt-5 sm:flex-row sm:gap-6
-          md:items-center md:px-14  lg:h-[70vh]  lg:flex-col"
+          md:items-center md:px-14  lg:flex-col  lg:gap-0"
         >
           <div className="flex flex-col gap-2">
             <div className=" flex w-full flex-col justify-center   text-center">
@@ -244,7 +238,7 @@ const Section2 = () => {
        flex  w-full flex-col items-start 
       gap-4 overflow-hidden rounded-md
          bg-[#F5F5F5] px-6 pt-5 sm:flex-row 
-          sm:gap-6 md:items-center  md:px-14  lg:h-[70vh] lg:flex-col "
+          sm:gap-6 md:items-center  md:px-14 lg:flex-col lg:gap-0 "
         >
           <div className="flex flex-col gap-2">
             <div className=" flex w-full flex-col justify-center   text-center">
