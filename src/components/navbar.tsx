@@ -62,10 +62,12 @@ export const Navbar = () => {
       <NavbarBrand as="li">
         <NextLink className="flex items-center justify-start gap-2" href="/">
           <Logo />
-          <p className="pt-1 text-sm font-extrabold md:text-xl">Total Tech</p>
+          <p className="pt-1 text-sm font-extrabold md:text-xl">
+            Total Tech Template
+          </p>
         </NextLink>
       </NavbarBrand>
-      {/* <NavbarContent className="hidden gap-4 sm:flex" justify="center">
+      <NavbarContent className="hidden gap-4 sm:flex" justify="center">
         <ul className=" hidden justify-start gap-6 lg:flex">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
@@ -87,20 +89,20 @@ export const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
-      </NavbarContent> */}
+      </NavbarContent>
 
       <NavbarContent
         className="hidden basis-1/5 sm:flex sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden gap-2 sm:flex">
+        <NavbarItem className="hidden gap-2 md:flex">
           {/* <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
             <TwitterIcon className="text-default-500" />
-          </Link> */}
-          {/* <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
+          </Link>
+          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
             <DiscordIcon className="text-default-500" />
-          </Link> */}
-          {/* <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+          </Link>
+          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
             <GithubIcon className="text-default-500" />
           </Link> */}
           {/* <ThemeSwitch /> */}
@@ -122,14 +124,15 @@ export const Navbar = () => {
 
       {/* for mobile  */}
 
-      {/* <NavbarContent className="basis-1 pl-4 sm:hidden" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+      <NavbarContent className="basis-1 pl-4 md:hidden" justify="end">
+        {/* <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <TwitterIcon className="text-default-500" />
-        </Link>
+        </Link> */}
+        {/* <ThemeSwitch /> */}
         <NavbarMenuToggle />
-      </NavbarContent> */}
-      {/* 
-      <NavbarMenu className="bg-black/50 backdrop-blur-sm">
+      </NavbarContent>
+
+      {/* <NavbarMenu className="bg-black/50 backdrop-blur-sm">
         {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (

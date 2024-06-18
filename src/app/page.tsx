@@ -4,25 +4,38 @@ import Image from 'next/legacy/image';
 import { useEffect } from 'react';
 import Lenis from 'lenis';
 import {
-  Card,
   CardFooter,
   Button,
   CardBody,
   Input,
   Textarea,
+  AccordionItem,
+  Accordion,
 } from '@nextui-org/react';
 import emailjs from '@emailjs/browser';
 
-import landing from '../../public/images/landing.jpg';
+import landing from '../../public/images/rent/big-sale-banner.png';
+import section1Image from '../../public/images/rent/time-to-get-productive.png';
+
+import section2Image1 from '../../public/images/rent/chairs-rug.png';
+import section2Image2 from '../../public/images/rent/salon.png';
+
 import phoneOptimization from '../../public/images/app.png';
 import phone from '../../public/images/phone.png';
 import responsiveDesign from '../../public/images/responsive-design.png';
 
 import { useContactUsFormStore } from './lib/store';
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import { Card, CardContent } from '@/components/ui/card';
 import { title, subtitle } from '@/components/primitives';
 import { roboto } from '@/config/fonts';
-import Meteors from '@/components/magicui/meteors';
 import { toast } from '@/components/ui/use-toast';
 
 export default function Home() {
@@ -51,7 +64,8 @@ export default function Home() {
       <HeroSection />
       <Section1 />
       <Section2 />
-      <Section3 />
+      {/* <Section3 /> */}
+      <Footer />
     </section>
   );
 }
@@ -60,34 +74,53 @@ const HeroSection = () => {
   // const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
 
   return (
-    <div className="sticky top-0 h-[100vh] w-full  ">
-      <Image
+    <div className="  w-full  overflow-hidden  p-5 ">
+      {/* <Image
         priority
         alt="Background Image"
         layout="fill"
         objectFit="cover"
         placeholder="blur"
         src={landing}
-      />
+      /> */}
 
-      <div className="relative flex h-[50hv]  w-full flex-col items-center justify-center gap-1 overflow-hidden bg-transparent px-10 pt-[20vh]  sm:gap-6  md:pt-32  ">
-        <Meteors number={30} />
-        <div className=" flex w-full flex-col justify-center text-center">
-          <div className="-mb-4 sm:mb-1 ">
-            <h1 className={title()}>Level&nbsp;</h1>
-            <h1 className={title()}>Up&nbsp;</h1>
-            <h1 className={title()}>Your</h1>
+      <div
+        className="relative
+       mt-[8vh] flex  w-full flex-col items-start 
+      gap-4 overflow-hidden rounded-md
+         bg-[#F0EFEB] px-6 pt-5 sm:mt-[10vh] sm:flex-row 
+          sm:gap-6 md:items-center  md:px-14  lg:h-[70vh]  "
+      >
+        <div className="  flex flex-col gap-2 lg:w-[30vw]">
+          <div className=" flex w-full flex-col justify-center  text-center">
+            <div className="-mb-4 flex gap-2 sm:mb-1 ">
+              <h1 className={title()}>S</h1>
+              <h1 className={title()}>A</h1>
+              <h1 className={title()}>L</h1>
+              <h1 className={title()}>E</h1>
+            </div>
+          </div>
+          <div className=" flex  w-full text-start  text-lg font-medium leading-7 text-black sm:text-xl  ">
+            <h2>
+              The first step in determining your ideal working hours is to
+              figure out when your mind and body naturally work the best.
+            </h2>
           </div>
           <div>
-            <h1 className={title()}>Online</h1>
-            <h1 className={title({ color: 'blue' })}>&nbsp;Presence</h1>
+            {' '}
+            <Button className="mt-6 rounded-md bg-black p-7 text-lg">
+              See our big sale
+            </Button>
           </div>
         </div>
-        <div className="w-fullfont-medium text-center text-cyan-50 sm:text-xl">
-          <h2>
-            Watch Your Business Shine with Fast and Beautiful Websites with
-            Total Tech
-          </h2>
+        <div className="white mt-14">
+          <Image
+            // alt="Woman listing to music"
+            className=" scale-85 rounded-sm object-cover"
+            // height={800}
+            src={landing}
+            // width={800}
+          />
         </div>
       </div>
     </div>
@@ -95,323 +128,268 @@ const HeroSection = () => {
 };
 
 const Section1 = () => {
-  // const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
+  // const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
 
   return (
-    <div className="sticky flex  w-full flex-col items-center  justify-start gap-9  overflow-hidden bg-black pt-20  text-center md:pt-28 lg:top-0 lg:h-[160vh]  ">
-      <section className="flex flex-col items-center justify-start">
-        <div className="   pb-2 sm:w-full">
-          <h1 className={title({ size: 'md', class: 'mb-3  mr-2' })}>
-            Why Should
-          </h1>
-          <span
-            className={title({
-              color: 'blue',
-              size: 'md',
-              className: 'bg-white',
-            })}
-          >
-            You Care?
-          </span>
+    <div className="w-full  overflow-hidden  p-5 ">
+      <div
+        className="relative
+       flex  w-full flex-col items-start 
+      gap-4 overflow-hidden rounded-md
+         bg-[#FFF1E6] px-6 pt-5 sm:flex-row 
+          sm:gap-6 md:items-center  md:px-14  lg:h-[70vh]  "
+      >
+        <div className="flex flex-col gap-2">
+          <div className=" flex w-full flex-col justify-center   text-center">
+            <div className="flex gap-2 pt-5 sm:mb-1 ">
+              <h1 className={title({ size: 'md' })}>Time</h1>
+              <h1 className={title({ size: 'md' })}>To</h1>
+              <h1 className={title({ size: 'md' })}>Get</h1>
+              <h1 className={title({ size: 'md' })}>Productive</h1>
+            </div>
+          </div>
+          <div className=" flex  w-full text-start  text-lg font-medium leading-7 text-black sm:text-xl  ">
+            <h2>
+              The first step in determining your ideal working hours is to
+              figure out when your mind and body naturally work the best.
+            </h2>
+          </div>
+          {/* <div>
+            {' '}
+            <Button className="mt-6 rounded-md bg-black p-7 text-lg">
+              See our big sale
+            </Button>
+          </div> */}
         </div>
-
-        <h2 className={subtitle({ class: 'w-10/12 md:w-1/2', size: 'md' })}>
-          We specialize in web design and development for clients anywhere.
-          Every line of code is written by hand to ensure the best performance,
-          which helps bring in more customers to your site and bring more
-          revenue to your business
-        </h2>
-      </section>
-
-      <section className="flex  flex-wrap items-center justify-center gap-20  p-6 md:max-w-[80vw] lg:flex-nowrap">
-        <div className="flex  flex-col items-center justify-center gap-3">
+        <div className="white mt-14">
           <Image
-            priority
-            alt="Background Image"
-            height={90}
-            layout="fixed"
-            sizes="(max-width: 90px) 100vw,
-            (max-width: 70px) 50vw,
-            33vw"
-            src={phone}
-            width={90}
+            // alt="Woman listing to music"
+            className=" scale-95 rounded-md object-cover"
+            // height={800}
+            src={section1Image}
+            // width={800}
           />
-          <h1
-            className={title({ size: 'sm', color: 'blue', className: 'mb-1' })}
-          >
-            Mobile-First Design
-          </h1>
-          <h2 className={subtitle({ size: 'sm' })}>
-            We start building your site for mobile devices first then we add on
-            to it to make tablet and desktop.
-          </h2>
         </div>
-
-        <div className="flex flex-col items-center justify-center gap-3 ">
-          <Image
-            priority
-            alt="Background Image"
-            height={90}
-            layout="fixed"
-            sizes="(max-width: 90px) 100vw,
-            (max-width: 90px) 50vw,
-            33vw"
-            src={responsiveDesign}
-            width={90}
-          />
-          <h1
-            className={title({ size: 'sm', color: 'blue', className: 'mb-1' })}
-          >
-            Fully Responsive
-          </h1>
-          <h2 className={subtitle({ size: 'sm' })}>
-            Your website will fit all mobile screens sizes tablets, and desktop
-            sizes so new clients can access your site from anywhere.
-          </h2>
-        </div>
-        <div className="flex  flex-col items-center justify-center gap-3 ">
-          <Image
-            priority
-            alt="Background Image"
-            height={90}
-            layout="fixed"
-            sizes="(max-width: 90px) 100vw,
-            (max-width: 90px) 50vw,
-            33vw"
-            src={phoneOptimization}
-            width={90}
-          />
-          <h1
-            className={title({ size: 'sm', color: 'blue', className: 'mb-1' })}
-          >
-            Optimization
-          </h1>
-          <h2 className={subtitle({ size: 'sm' })}>
-            60% of all internet traffic is on mobile devices, so we optimize
-            your mobile to perform their best in search engines.
-          </h2>
-        </div>
-      </section>
-
-      {/* <h1 className={title({ color: 'blue' })}>&nbsp;Should You Care?</h1> */}
+      </div>
     </div>
   );
 };
 
 const Section2 = () => {
-  // const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
-
   return (
-    <div className="sticky flex  w-full flex-col  items-center justify-start gap-10 overflow-hidden  bg-gray-900  pt-20 text-center md:pt-28 lg:top-0 lg:h-[160vh]  ">
-      <section className="flex flex-col items-center justify-start">
-        <div className=" flex  w-48 flex-wrap justify-center sm:w-full">
-          <h1 className={title({ size: 'md', class: ' sm:mr-2' })}>
-            Latest Work
+    <div className="flex flex-col  items-start justify-center p-5 md:flex-row md:gap-5">
+      <div className="flex w-full flex-col items-center justify-center  p-5 pt-6 md:w-[33vw]">
+        <div className="w-full  pb-5 text-start">
+          <h1
+            className={title({
+              size: 'md',
+              color: 'white',
+              className: ' text-start',
+            })}
+          >
+            To plant a garden is to believe in tomorrow
           </h1>
-          <span className={title({ color: 'blue', size: 'md' })}>Created</span>
         </div>
-      </section>
 
-      <section className="flex  flex-wrap items-center justify-center gap-12  p-20 pt-0 md:max-w-[80vw] md:pt-14 lg:flex-nowrap">
-        <div className="flex flex-col items-center justify-start">
-          <Card isFooterBlurred className="flex border-none" radius="lg">
-            <Image
-              alt="Woman listing to music"
-              className="object-cover"
-              height={400}
-              src={landing}
-              width={400}
-            />
-            <div className="flex items-center justify-center">
-              <CardFooter className="absolute bottom-3 z-10  w-[calc(100%_-_15px)] justify-between overflow-hidden rounded-large border-1 border-white/20 py-1 shadow-small before:rounded-xl before:bg-white/10">
-                <p className="text-tiny text-white/80">Available soon.</p>
-                <Button
-                  className="flex bg-black/20 text-tiny text-white"
-                  color="default"
-                  radius="lg"
-                  size="sm"
-                  variant="flat"
-                >
-                  Website
-                </Button>
-              </CardFooter>
-            </div>
-          </Card>
+        <h2 className="flex  w-full text-start  text-medium font-medium leading-7 text-white sm:text-xl ">
+          The first step in determining your ideal working hours is to figure
+          out when your mind and body naturally work the best.
+        </h2>
+        <div className="max-w-s flex w-[70vw] items-center justify-center pt-5">
+          <CarouselSize />
         </div>
-        <div className="flex flex-col items-center justify-start">
-          <Card isFooterBlurred className="flex border-none" radius="lg">
-            <Image
-              alt="Woman listing to music"
-              className="object-cover"
-              height={400}
-              src={landing}
-              width={400}
-            />
-            <div className="flex items-center justify-center">
-              <CardFooter className="absolute bottom-3 z-10  w-[calc(100%_-_15px)] justify-between overflow-hidden rounded-large border-1 border-white/20 py-1 shadow-small before:rounded-xl before:bg-white/10">
-                <p className="text-tiny text-white/80">Available soon.</p>
-                <Button
-                  className="flex bg-black/20 text-tiny text-white"
-                  color="default"
-                  radius="lg"
-                  size="sm"
-                  variant="flat"
-                >
-                  Website
-                </Button>
-              </CardFooter>
-            </div>
-          </Card>
-        </div>
-        <div className="flex flex-col items-center justify-start">
-          <Card isFooterBlurred className="flex border-none" radius="lg">
-            <Image
-              alt="Woman listing to music"
-              className="object-cover"
-              height={400}
-              src={landing}
-              width={400}
-            />
-            <div className="flex items-center justify-center">
-              <CardFooter className="absolute bottom-3 z-10  w-[calc(100%_-_15px)] justify-between overflow-hidden rounded-large border-1 border-white/20 py-1 shadow-small before:rounded-xl before:bg-white/10">
-                <p className="text-tiny text-white/80">Available soon.</p>
-                <Button
-                  className="flex bg-black/20 text-tiny text-white"
-                  color="default"
-                  radius="lg"
-                  size="sm"
-                  variant="flat"
-                >
-                  Website
-                </Button>
-              </CardFooter>
-            </div>
-          </Card>
-        </div>
-      </section>
+      </div>
 
-      {/* <h1 className={title({ color: 'blue' })}>&nbsp;Should You Care?</h1> */}
+      <div className="w-full overflow-hidden  pb-5  md:w-[33vw]">
+        <div
+          className="relative
+       flex  w-full flex-col items-start 
+      gap-4 overflow-hidden rounded-md
+         bg-[#F5F5F5] px-6 pt-5 sm:flex-row sm:gap-6
+          md:items-center md:px-14  lg:h-[70vh]  lg:flex-col"
+        >
+          <div className="flex flex-col gap-2">
+            <div className=" flex w-full flex-col justify-center   text-center">
+              <div className="flex gap-2 pt-5 sm:mb-1 ">
+                <h1 className={title({ size: 'md' })}>Japandi Design</h1>
+              </div>
+            </div>
+            <div className=" flex  w-full text-start  text-lg font-medium leading-7 text-black sm:text-xl  ">
+              <h2>
+                Japandi blends the smooth, modern lines of Scandinavian design
+                with the sleek, functional, elegance of the Japanese aesthetic.
+              </h2>
+            </div>
+            {/* <div>
+            {' '}
+            <Button className="mt-6 rounded-md bg-black p-7 text-lg">
+              See our big sale
+            </Button>
+          </div> */}
+          </div>
+          <div className="white mt-14">
+            <Image
+              // alt="Woman listing to music"
+              className=" scale-95 rounded-md object-cover"
+              // height={800}
+              src={section2Image1}
+              // width={800}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="w-full overflow-hidden md:w-[33vw]  ">
+        <div
+          className="relative
+       flex  w-full flex-col items-start 
+      gap-4 overflow-hidden rounded-md
+         bg-[#F5F5F5] px-6 pt-5 sm:flex-row 
+          sm:gap-6 md:items-center  md:px-14  lg:h-[70vh] lg:flex-col "
+        >
+          <div className="flex flex-col gap-2">
+            <div className=" flex w-full flex-col justify-center   text-center">
+              <div className="flex gap-2 pt-5 sm:mb-1 ">
+                <h1 className={title({ size: 'md' })}>Dark colors in 2024</h1>
+              </div>
+            </div>
+            <div className=" flex  w-full text-start  text-lg font-medium leading-7 text-black sm:text-xl  ">
+              <h2>
+                Choosing the right rug for your living space can be hard. It can
+                sometimes feel like you are trying to solve a puzzle. We are
+                here to help you decide what rug is right for your space.
+              </h2>
+            </div>
+            {/* <div>
+            {' '}
+            <Button className="mt-6 rounded-md bg-black p-7 text-lg">
+              See our big sale
+            </Button>
+          </div> */}
+          </div>
+          <div className="white mt-14">
+            <Image
+              // alt="Woman listing to music"
+              className=" scale-95 rounded-md object-cover"
+              // height={800}
+              src={section2Image2}
+              // width={800}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-const Section3 = () => {
-  const { contactUsFormData, setContactsUsForm } = useContactUsFormStore();
-  const handleChange = (event: any) => {
-    const { name, value } = event.target;
+const CarouselSize = () => {
+  return (
+    <Carousel
+      className="w-full max-w-sm"
+      opts={{
+        align: 'start',
+      }}
+    >
+      <CarouselContent>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <CarouselItem key={index} className="">
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
+                  <span className="text-3xl font-semibold">{index + 1}</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  );
+};
 
-    setContactsUsForm({ ...contactUsFormData, [name]: value });
-  };
-  // ? this should be in a use case
-  // ? {{email Js send email}}
-  const sendEmail = (e: any) => {
-    const templateParams = {
-      to_name: 'totaltech',
-      from_name: contactUsFormData.name,
-      subject: 'Client Contact Us',
-      message: `Client ${contactUsFormData.name} wants you to call them 
-                or just email them at ${contactUsFormData.email}. \n
-                client business: ${contactUsFormData.business}. \n
-                client description: ${contactUsFormData.description} `,
-    };
-
-    e.preventDefault();
-    emailjs
-      .send('service_zh25lbr', 'template_tcfc0ub', templateParams, {
-        publicKey: 'zCwC7ca2BSPtKUbpE',
-      })
-      .then(
-        () => {
-          // console.log('SUCCESS!');
-          toast({
-            description: 'Your message has been sent.',
-            className:
-              'font-bold top-10 sm:top-0 bg-black/60 backdrop-blur-[5px]',
-          });
-          e.target.reset();
-        },
-        (error) => {
-          // console.log('FAILED...', error);
-        },
-      );
-  };
+const Footer = () => {
+  // const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
 
   return (
-    <div className="relative flex h-[100vh]  w-full flex-col items-center   justify-items-start  gap-8 overflow-hidden bg-black pt-24  sm:gap-6  md:gap-9 md:pt-[10vh]">
-      <section className="flex flex-col items-center justify-start">
-        <div className=" flex  w-48 flex-wrap justify-center sm:w-full">
-          <h1 className={title({ size: 'md', class: '' })}>Contact</h1>
-          <span className={title({ color: 'blue', size: 'md' })}>&nbsp;Us</span>
-        </div>
-      </section>
-
-      <footer className="flex w-full flex-wrap items-center justify-center gap-10 ">
-        <Card className="sm:w-3xl flex w-9/12 max-w-2xl">
-          <CardBody>
-            <form
-              className="md:max-h-auto flex w-full flex-col flex-wrap gap-4 md:flex-nowrap"
-              onSubmit={sendEmail}
-            >
-              <Input
-                required
-                className="h-12 md:h-auto md:max-h-12"
-                id="name"
-                label="name"
-                name="name"
-                type="name"
-                onChange={handleChange}
-              />
-              <Input
-                className="h-12 md:h-auto md:max-h-12"
-                id="business"
-                label="Business"
-                name="business"
-                type="business"
-                onChange={handleChange}
-              />
-              <Input
-                required
-                className="h-12 md:h-auto md:max-h-12"
-                id="email"
-                label="Email"
-                name="email"
-                type="email"
-                onChange={handleChange}
-              />
-              <Input
-                className="h-12 md:h-auto md:max-h-12"
-                id="phoneNumber"
-                label="Phone number"
-                name="phoneNumber"
-                type="phone number"
-                onChange={handleChange}
-              />
-              <Textarea
-                className="h-24 md:h-auto md:max-h-24"
-                id="description"
-                label="Description"
-                name="description"
-                placeholder="Type your Message Here"
-                onChange={handleChange}
-              />
-              <div className="flex justify-end pr-2 pt-6">
-                <Button
-                  className="max-p-4"
-                  color="primary"
-                  size="md"
-                  type="submit"
+    <div className="  h-[100vh]  w-full overflow-hidden  p-5 ">
+      <div
+        className="relative
+       mt-[8vh] flex  h-[85vh] w-full flex-col 
+      items-start gap-4 overflow-hidden
+         rounded-md bg-[#17282B]  px-6 
+          sm:flex-row sm:gap-6  md:items-center md:px-14    "
+      >
+        <div className="  flex flex-col gap-2 lg:w-[30vw]">
+          <div className=" flex w-full flex-col justify-start  text-start">
+            <div className="-mb-4 flex flex-col gap-2 pt-5  sm:mb-1">
+              <h1 className={title({ size: 'md' })}>contact@rent.com</h1>
+              <h1 className={title({ size: 'md' })}>+216 27 33 42 41</h1>
+              <h1 className={title({ size: 'md' })}>
+                {' '}
+                Main st. 10, EAC2CQ, London
+              </h1>
+            </div>
+          </div>
+          <div className="flex h-[50vh] flex-col pt-5">
+            <h1 className={title({ className: 'pt-6', size: 'md' })}>
+              About Us
+            </h1>
+            <section className=" w-[80vw] sm:w-[50vw]">
+              <Accordion>
+                <AccordionItem
+                  key="1"
+                  aria-label="Accordion 1"
+                  title="Who are we?"
                 >
-                  Submit
-                </Button>
-              </div>
-            </form>
-          </CardBody>
-        </Card>
+                  <p>
+                    Total Tech is a cutting-edge agency specializing in web and
+                    mobile development. Our team of expert developers and
+                    designers is dedicated to creating innovative and
+                    user-friendly solutions tailored to your business needs.
+                  </p>
+                </AccordionItem>
+                <AccordionItem
+                  key="2"
+                  aria-label="Accordion 2"
+                  title="What services do we offer?"
+                >
+                  <ul className="flex flex-col items-center justify-center gap-6">
+                    <li className="flex flex-col gap-3">
+                      <strong>Web Development</strong> We build responsive and
+                      robust websites using the latest technologies and best
+                      practices to ensure optimal performance and user
+                      experience.
+                    </li>
+                  </ul>
+                </AccordionItem>
+                <AccordionItem
+                  key="3"
+                  aria-label="Accordion 3"
+                  title="Contact Us"
+                >
+                  <p>
+                    You can reach us at any time by making an appointment.
+                    Provide your email or phone number, and choose a convenient
+                    day and time. We will call you to discuss your website
+                    creation needs and pricing.
+                  </p>
+                </AccordionItem>
+              </Accordion>
+            </section>
+          </div>
+        </div>
+      </div>
 
-        {/* <Card className="sm:w-3xl perspective flex h-full w-10/12 max-w-2xl">
-          <CardBody></CardBody>
-        </Card> */}
-      </footer>
+      <p className="p-2">
+        powered by{' '}
+        <a
+          href="https://www.totaltechtn.com"
+          className="font-bold text-blue-600 underline"
+        >
+          Totaltechtn
+        </a>
+      </p>
     </div>
   );
 };

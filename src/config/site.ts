@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'TotalTech',
-  description: 'Make beautiful websites regardless of your design experience.',
+  name: 'rent design interior',
+  description: 'Total Tech rent website design',
   navItems: [
     {
       label: 'Home',
