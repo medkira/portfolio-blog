@@ -48,7 +48,7 @@ export default function index() {
             <motion.a
               key={`f_${i}`}
               animate="enter"
-              className="  h-fit w-fit"
+              className=" mr-6 "
               custom={i}
               exit="exit"
               href={href}

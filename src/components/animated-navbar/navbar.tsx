@@ -42,7 +42,6 @@ export const Navbar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = (event: any) => {
-    console.log('hi');
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setIsActive(false);
     }
@@ -61,11 +60,12 @@ export const Navbar = () => {
       <motion.div
         animate={isActive ? 'open' : 'closed'}
         className="relative rounded-[25px] bg-[#c9fd74] 
-        [--costume-height:53vh]  [--costume-width:75vw] 
-        md:[--costume-height:70vh]
-        md:[--costume-width:50vw]  lg:[--costume-height:70vh] 
-        lg:[--costume-width:30vw]
-        "
+          [--costume-width:75vw] 
+         md:[--costume-width:50vw]   
+        lg:[--costume-width:30vw]"
+        // [--costume-height:53vh]
+        // md:[--costume-height:70vh]
+        // lg:[--costume-height:70vh]
         initial="closed"
         variants={menu}
       >

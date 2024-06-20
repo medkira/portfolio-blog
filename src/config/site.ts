@@ -28,23 +28,28 @@ export const siteConfig = {
   navMenuItems: [
 
     {
+      label: 'Home',
+      href: '/',
+    },
+    {
       label: 'Projects',
       href: '/projects',
     },
-    {
-      label: 'Agency',
-      href: '/Agency',
-    },
+
     {
       label: 'Expertise',
       href: '/Expertise',
     },
     {
-      label: 'Careers',
-      href: '/Careers',
+      label: 'About Me',
+      href: '/Agency',
     },
+    // {
+    //   label: 'Careers',
+    //   href: '/Careers',
+    // },
     {
-      label: 'Contact',
+      label: 'Contact Me',
       href: '/Contact',
     },
 
