@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'rent design interior',
-  description: 'Total Tech rent website design',
+  name: ' design prototype',
+  description: 'Total Tech  website prototype',
   navItems: [
     {
       label: 'Home',
@@ -26,44 +26,53 @@ export const siteConfig = {
     },
   ],
   navMenuItems: [
-    {
-      label: 'Profile',
-      href: '/profile',
-    },
-    {
-      label: 'Dashboard',
-      href: '/dashboard',
-    },
+
     {
       label: 'Projects',
       href: '/projects',
     },
     {
-      label: 'Team',
-      href: '/team',
+      label: 'Agency',
+      href: '/Agency',
     },
     {
-      label: 'Calendar',
-      href: '/calendar',
+      label: 'Expertise',
+      href: '/Expertise',
     },
     {
-      label: 'Settings',
-      href: '/settings',
+      label: 'Careers',
+      href: '/Careers',
     },
     {
-      label: 'Help & Feedback',
-      href: '/help-feedback',
+      label: 'Contact',
+      href: '/Contact',
     },
-    {
-      label: 'Logout',
-      href: '/logout',
-    },
+
   ],
-  links: {
-    github: 'https://github.com/nextui-org/nextui',
-    twitter: 'https://twitter.com/getnextui',
-    docs: 'https://nextui.org',
-    discord: 'https://discord.gg/9b6yyZKmH4',
-    sponsor: 'https://patreon.com/jrgarciadev',
-  },
+
+  links: [
+    {
+
+      label: "Facebook",
+
+      href: "/"
+
+    },
+
+    {
+
+      label: "Instegram",
+
+      href: "/"
+
+    },
+
+    {
+
+      label: "Youtube",
+
+      href: "/"
+
+    },
+  ]
 };

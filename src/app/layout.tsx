@@ -2,7 +2,7 @@ import '@/styles/globals.css';
 import { Metadata, Viewport } from 'next';
 import clsx from 'clsx';
 
-import { Navbar } from '../components/navbar';
+import { Navbar } from '../components/animated-navbar/navbar';
 
 import { Providers } from './providers';
 
@@ -46,6 +46,7 @@ export default function RootLayout({
           <div className={`${roboto.className}`}>
             <div className="fixed left-0 right-0 top-0 z-20 backdrop-blur-[1.9px] sm:backdrop-blur-none">
               <Navbar />
+              <div>LOGO</div>
             </div>
 
             {/* container z-10 mx-auto max-w-7xl flex-grow bg-transparent px-6 */}
