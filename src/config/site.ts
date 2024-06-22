@@ -66,7 +66,7 @@ export const siteConfig = {
 
     {
 
-      label: "Instegram",
+      label: "Instagram",
 
       href: "/"
 

@@ -48,7 +48,7 @@ export default function Home() {
 
 const HeroSection = () => {
   return (
-    <div className="mt-[2.2vh] flex h-[99vh] w-full flex-col items-center  justify-center gap-3  overflow-hidden p-3 sm:mt-[1.7vh] ">
+    <div className="mt-[2.2vh] flex h-[99vh] w-full flex-col items-center justify-center  gap-3 overflow-hidden  p-3 sm:mt-[1.7vh] sm:p-6 ">
       <div
         className=" relative mt-[8vh] flex w-full flex-col justify-around gap-4 overflow-hidden
         rounded-2xl bg-[#F0EFEB] p-5 pt-5 sm:mt-[5vh] sm:flex-row
@@ -105,7 +105,7 @@ const Section1 = () => {
   // const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
 
   return (
-    <div className="w-full  overflow-hidden  p-3 ">
+    <div className="w-full  overflow-hidden  p-3 sm:p-5">
       <div
         className="relative
        flex  w-full flex-col items-start
@@ -177,7 +177,7 @@ const Section2 = () => {
   ];
 
   return (
-    <div className="flex flex-col  items-start justify-center p-3   md:flex-row md:gap-5">
+    <div className="flex flex-col  items-start justify-center p-3 sm:p-6  md:flex-row md:gap-5">
       {sections.map((section) => (
         <div
           key={section.title}
@@ -274,7 +274,7 @@ const Footer = () => {
   // const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
 
   return (
-    <div className="flex  h-[98vh] w-full items-end justify-center overflow-hidden  p-3 ">
+    <div className="flex  h-[98vh] w-full items-end justify-center overflow-hidden p-3  sm:p-6 ">
       <div
         className="relative
           mb-[3vh]  flex

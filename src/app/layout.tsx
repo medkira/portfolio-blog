@@ -9,6 +9,8 @@ import { Providers } from './providers';
 import { Toaster } from '@/components/ui/toaster';
 import { siteConfig } from '@/config/site';
 import { roboto } from '@/config/fonts';
+import { useEffect } from 'react';
+import Lenis from 'lenis';
 
 export const metadata: Metadata = {
   title: {
