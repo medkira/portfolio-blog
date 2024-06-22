@@ -48,7 +48,7 @@ export default function RootLayout({
             <div className="fixed left-0 right-0 top-0 z-20 ">
               <Navbar />
             </div>
-            <div className="fixed left-[30px]  top-[35px] z-20  ">
+            <div className="fixed left-[30px]  top-[35px]  ">
               <h1> SAIF DHIFI</h1>
               <p className="-mt-1 text-xs text-zinc-400">
                 Freelancer Video editor

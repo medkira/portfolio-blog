@@ -7,14 +7,6 @@ import { Button } from '@nextui-org/react';
 
 import personalImage from '../../public/images/personal-image.jpeg';
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
-import { Card, CardContent } from '@/components/ui/card';
 import { title } from '@/components/primitives';
 import { roboto } from '@/config/fonts';
 
@@ -55,19 +47,14 @@ export default function Home() {
 }
 
 const HeroSection = () => {
-  // const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
-
   return (
-    <div className="mt-[1vh]  flex w-full flex-col  items-center justify-center  gap-3 overflow-hidden p-5 ">
-      {/* relative mt-[8vh] flex w-full flex-col justify-between gap-4
-      overflow-hidden rounded-2xl bg-[#F0EFEB] px-6 pt-5 sm:mt-[10vh]
-      sm:flex-row sm:gap-x-16 md:items-center md:px-[200px] lg:h-[70vh] */}
+    <div className="mt-[1.7vh] flex h-[99vh] w-full flex-col  items-center justify-center  gap-3 overflow-hidden p-3 ">
       <div
-        className=" relative mt-[8vh] flex w-full flex-col justify-around gap-4
-        overflow-hidden rounded-2xl bg-[#F0EFEB] p-5 pt-5 sm:mt-[10vh] sm:flex-row
-        md:items-center  md:p-5 md:px-[35px] lg:h-[75vh]  "
+        className=" relative mt-[8vh] flex w-full flex-col justify-around gap-4 overflow-hidden
+        rounded-2xl bg-[#F0EFEB] p-5 pt-5 sm:mt-[5vh] sm:flex-row
+        md:items-center  md:p-5 md:px-[35px] lg:h-[79vh]  "
       >
-        <div className="  flex flex-col gap-2 lg:w-[95vw] ">
+        <div className="  flex flex-col gap-2 lg:w-[85vw] ">
           <div className=" flex w-full flex-col justify-center  text-center">
             <div className="-mb-2 flex flex-col items-start  sm:mb-1 ">
               <h1 className={title({ className: '-mb-6 sm:mb-0' })}>
@@ -77,15 +64,20 @@ const HeroSection = () => {
             </div>
           </div>
           <div
-            className=" sm:text-md   flex w-full  text-start text-lg font-medium 
-          leading-6 text-black lg:text-xl "
+            className=" sm:text-md   flex w-full   text-start text-lg
+          font-medium leading-6 text-black lg:text-xl"
           >
             <h2>
+              {/*
               As an editor I help agencies, filmmakers and creatives in
               achieving their goals. Tools like video editing, sounddesign and
               color correction empower us in telling your story. From social
               media content to feature films: I will tackle every obstacle with
-              you until the result is satisfying.
+              you until the result is satisfying. */}
+              As an editor, I help agencies, filmmakers, and creatives achieve
+              their goals through video editing, sound design, and color
+              correction. From social media content to feature films, I work
+              with you to ensure a satisfying result.
             </h2>
           </div>
           <div>
@@ -96,15 +88,16 @@ const HeroSection = () => {
           </div>
         </div>
         {/* mb-5  rounded-2xl bg-[#A9E920] */}
-        <div className=" flex rounded-2xl bg-[#A9E920] sm:m-5 ">
-          <Image
-            // alt="Woman listing to music"
-            className=" rounded-2xl object-cover"
-            // height={800}
-            src={personalImage}
-            // width={800}
-          />
-        </div>
+        {/* <div className=" rounded-2xl bg-[#A9E920]"> */}
+        <Image
+          // alt="Woman listing to music"
+          className="scale-95 rounded-2xl object-cover"
+          // height={1100}
+          src={personalImage}
+          // width={500}
+        />
+
+        {/* </div> */}
       </div>
     </div>
   );
@@ -114,12 +107,12 @@ const Section1 = () => {
   // const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
 
   return (
-    <div className="w-full  overflow-hidden  p-5 ">
+    <div className="w-full  overflow-hidden  p-3 ">
       <div
         className="relative
-       flex  w-full flex-col items-start 
+       flex  w-full flex-col items-start
       gap-4 overflow-hidden rounded-2xl
-         bg-[#FFF1E6] px-6 pt-5 sm:flex-row 
+         bg-[#FFF1E6] px-6 pt-5 sm:flex-row
           sm:gap-6 md:items-center  md:px-14  lg:h-[70vh]  "
       >
         <div className="flex flex-col gap-2">
@@ -186,14 +179,14 @@ const Section2 = () => {
   ];
 
   return (
-    <div className="flex flex-col  items-start justify-center  p-5 md:flex-row md:gap-5">
+    <div className="flex flex-col  items-start justify-center p-3   md:flex-row md:gap-5">
       {sections.map((section) => (
         <div
           key={section.title}
           className="w-full overflow-hidden pb-5 md:w-[33vw]"
         >
           <div
-            className="sm:gap-6md relative flex w-full flex-col items-start  gap-4 overflow-hidden rounded-xl 
+            className="sm:gap-6md relative flex w-full flex-col items-start  gap-4 overflow-hidden rounded-xl
           bg-[#F5F5F5] px-6 pt-5  md:px-6 lg:flex-col lg:gap-0"
           >
             <div className="flex flex-col gap-2">
@@ -219,13 +212,13 @@ const Section2 = () => {
           </div>
         </div>
       ))}
-      {/* 
+      {/*
       <div className="w-full overflow-hidden md:w-[33vw]  ">
         <div
           className="relative
-       flex  w-full flex-col items-start 
+       flex  w-full flex-col items-start
       gap-4 overflow-hidden rounded-md
-         bg-[#F5F5F5] px-6 pt-5 sm:flex-row 
+         bg-[#F5F5F5] px-6 pt-5 sm:flex-row
           sm:gap-6 md:items-center  md:px-14 lg:flex-col lg:gap-0 "
         >
           <div className="flex flex-col gap-2">
@@ -240,7 +233,7 @@ const Section2 = () => {
 
               </h2>
             </div>
-       
+
           </div>
           <div className="white mt-14">
             <Image
@@ -279,50 +272,23 @@ const Section2 = () => {
   );
 };
 
-const CarouselSize = () => {
-  return (
-    <Carousel
-      className="w-full max-w-sm"
-      opts={{
-        align: 'start',
-      }}
-    >
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-3xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-  );
-};
-
 const Footer = () => {
   // const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
 
   return (
-    <div className="flex  h-[98vh] w-full items-center justify-center overflow-hidden  p-5 ">
+    <div className="flex  h-[98vh] w-full items-end justify-center overflow-hidden  p-3 ">
       <div
-        className="relative 
-          mt-[8vh]  flex
-          h-[85vh] 
+        className="relative
+          mb-[3vh]  flex
+          h-[80vh]
           w-[100vw]
           flex-col
-           items-center 
-          justify-center overflow-hidden rounded-2xl bg-[#c9fd74] sm:w-[50vw]"
+           items-center
+          overflow-hidden  rounded-2xl bg-[#bffa61] sm:w-[50vw] sm:justify-center"
       >
         {/* <Image className="scale-[35%] rounded-full" src={personalImage} /> */}
         <h1
-          className=" mt-5 text-[1.75rem] font-bold text-black"
+          className="mt-11  text-[6.8vw] font-bold text-black sm:mt-5 sm:text-[1.7rem]"
           style={{ transform: 'scaleY(1.25)', display: 'inline-block' }}
         >
           Got a project? Let&rsquo;s connect.
@@ -350,7 +316,7 @@ const Footer = () => {
               Email
             </label>
             <input
-              className="focus:shadow-outline w-full 
+              className="focus:shadow-outline w-full
               appearance-none rounded-xl border px-3 py-2 leading-tight
                text-[#c9fd74] shadow focus:outline-none"
               id="email"
@@ -395,6 +361,33 @@ const Footer = () => {
     </div>
   );
 };
+
+// const CarouselSize = () => {
+//   return (
+//     <Carousel
+//       className="w-full max-w-sm"
+//       opts={{
+//         align: 'start',
+//       }}
+//     >
+//       <CarouselContent>
+//         {Array.from({ length: 5 }).map((_, index) => (
+//           <CarouselItem key={index} className="">
+//             <div className="p-1">
+//               <Card>
+//                 <CardContent className="flex aspect-square items-center justify-center p-6">
+//                   <span className="text-3xl font-semibold">{index + 1}</span>
+//                 </CardContent>
+//               </Card>
+//             </div>
+//           </CarouselItem>
+//         ))}
+//       </CarouselContent>
+//       <CarouselPrevious />
+//       <CarouselNext />
+//     </Carousel>
+//   );
+// };
 
 // const Section1 = () => {
 //   // const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
