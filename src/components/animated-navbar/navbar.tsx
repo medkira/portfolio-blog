@@ -69,7 +69,15 @@ export const Navbar = () => {
         initial="closed"
         variants={menu}
       >
-        <AnimatePresence>{isActive && <Menu />}</AnimatePresence>
+        <AnimatePresence>
+          {isActive && (
+            <Menu
+              toggleMenu={() => {
+                setIsActive(!isActive);
+              }}
+            />
+          )}
+        </AnimatePresence>
       </motion.div>
       <Button
         isActive={isActive}

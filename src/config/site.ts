@@ -42,7 +42,7 @@ export const siteConfig = {
     },
     {
       label: 'About Me',
-      href: '/Agency',
+      href: '/about',
     },
     // {
     //   label: 'Careers',

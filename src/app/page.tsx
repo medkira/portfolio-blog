@@ -80,7 +80,6 @@ const HeroSection = () => {
             </h2>
           </div>
           <div>
-            {' '}
             <Button className="mb-0 mt-2 rounded-lg bg-[#c9fd74] p-7 text-lg font-bold text-black sm:mt-5">
               CONTACT ME
             </Button>
@@ -161,17 +160,17 @@ const Section2Title = () => {
 const Section2 = () => {
   const sections = [
     {
-      title: 'Lorem ipsum',
+      title: 'Lorem ipsums',
       description: 'description description',
       image: personalImage,
     },
     {
-      title: 'Lorem ipsum',
+      title: 'Lorem ipsu',
       description: 'description description',
       image: personalImage,
     },
     {
-      title: 'Lorem ipsum',
+      title: 'Lorem ipsumss',
       description: 'description description',
       image: personalImage,
     },

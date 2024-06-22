@@ -6,7 +6,7 @@ import { perspective, slideIn } from './animation';
 
 import { siteConfig } from '@/config/site';
 
-export default function index() {
+export default function index({ toggleMenu }: { toggleMenu: any }) {
   return (
     <div className={styles.nav}>
       <div className={styles.body}>
@@ -30,6 +30,9 @@ export default function index() {
                 <Link
                   className="text-[2rem] text-black sm:text-[2.2rem] "
                   href={href}
+                  onClick={() => {
+                    toggleMenu();
+                  }}
                 >
                   {label}
                 </Link>
