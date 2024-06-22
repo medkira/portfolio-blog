@@ -48,7 +48,7 @@ export default function Home() {
 
 const HeroSection = () => {
   return (
-    <div className="mt-[1.7vh] flex h-[99vh] w-full flex-col  items-center justify-center  gap-3 overflow-hidden p-3 ">
+    <div className="mt-[2.2vh] flex h-[99vh] w-full flex-col items-center  justify-center gap-3  overflow-hidden p-3 sm:mt-[1.7vh] ">
       <div
         className=" relative mt-[8vh] flex w-full flex-col justify-around gap-4 overflow-hidden
         rounded-2xl bg-[#F0EFEB] p-5 pt-5 sm:mt-[5vh] sm:flex-row
