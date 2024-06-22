@@ -75,14 +75,13 @@ const HeroSection = () => {
               media content to feature films: I will tackle every obstacle with
               you until the result is satisfying. */}
               As an editor, I help agencies, filmmakers, and creatives achieve
-              their goals through video editing, sound design, and color
-              correction. From social media content to feature films, I work
-              with you to ensure a satisfying result.
+              their goals through video editing. From social media content to
+              feature films, I work with you to ensure a satisfying result.
             </h2>
           </div>
           <div>
             {' '}
-            <Button className="mb-4 mt-3 rounded-lg bg-[#c9fd74] p-7 text-lg font-bold text-black sm:mt-5">
+            <Button className="mb-0 mt-2 rounded-lg bg-[#c9fd74] p-7 text-lg font-bold text-black sm:mt-5">
               CONTACT ME
             </Button>
           </div>
