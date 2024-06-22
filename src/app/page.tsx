@@ -149,7 +149,7 @@ const Section1 = () => {
 const Section2Title = () => {
   return (
     <div className="flex flex-col gap-2 p-5">
-      <div className=" -mb-8 flex w-full flex-col items-center  justify-center pt-6 text-center  sm:mb-1">
+      <div className=" -mb-4 flex w-full flex-col items-center  justify-center pt-6 text-center  sm:mb-1">
         <h1 className={title({ size: 'lg', className: 'text-white' })}>
           Latest Projects
         </h1>
