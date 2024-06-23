@@ -9,8 +9,6 @@ import { Providers } from './providers';
 import { Toaster } from '@/components/ui/toaster';
 import { siteConfig } from '@/config/site';
 import { roboto } from '@/config/fonts';
-import { useEffect } from 'react';
-import Lenis from 'lenis';
 
 export const metadata: Metadata = {
   title: {
@@ -25,7 +23,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
+    // { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
 };
@@ -41,7 +39,7 @@ export default function RootLayout({
 
       <body
         className={clsx(
-          'white min-h-screen  font-sans antialiased',
+          'white flex  min-h-screen flex-col justify-between font-sans antialiased',
           // fontSans.variable,
         )}
       >
@@ -56,11 +54,25 @@ export default function RootLayout({
                 Freelancer Video editor
               </p>
             </div>
+            <Toaster />
             {/* container z-10 mx-auto max-w-7xl flex-grow bg-transparent px-6 */}
-            <main className="">{children}</main>
+            <main>{children}</main>
           </div>
         </Providers>
-        <Toaster />
+        {/* bottom-0 text-center text-sm sm:ml-2 sm:justify-start" */}
+
+        <p className="  justify-end pb-3  text-center text-sm">
+          &copy; 2024{' '}
+          <a
+            className="font-bold"
+            href="https://www.totaltechtn.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            totaltechtn
+          </a>
+          . All rights reserved.
+        </p>
       </body>
     </html>
   );

@@ -39,9 +39,6 @@ export default function Home() {
       <Section2 />
       {/* <Section3 /> */}
       <Footer />
-      <p className="-mt-3 mb-3 flex items-center justify-center text-center text-sm sm:ml-2 sm:justify-start">
-        &copy; 2024 [totaltechtn]. All rights reserved.
-      </p>
     </section>
   );
 }
@@ -281,8 +278,9 @@ const Footer = () => {
           h-[80vh]
           w-[100vw]
           flex-col
-           items-center
-          overflow-hidden  rounded-2xl bg-[#bffa61] sm:w-[50vw] sm:justify-center"
+          items-center
+           overflow-hidden
+          rounded-2xl  bg-[#bffa61] sm:h-[81vh] sm:w-[50vw] sm:justify-center"
       >
         {/* <Image className="scale-[35%] rounded-full" src={personalImage} /> */}
         <h1
@@ -291,7 +289,7 @@ const Footer = () => {
         >
           Got a project? Let&rsquo;s connect.
         </h1>
-        <form className="mt-8 w-full max-w-md rounded-lg  p-4 ">
+        <form className="mt-8 w-full max-w-md rounded-lg p-4  sm:p-3 ">
           <div className="mb-4">
             <label
               className="mb-2 block text-lg font-bold text-gray-700"
@@ -336,13 +334,13 @@ const Footer = () => {
               rows={4}
             />
           </div>
-          <div className="flex items-center justify-between">
-            <button
+          <div className=" flex items-center justify-between">
+            <Button
               className="focus:shadow-outline rounded-lg bg-black px-4 py-2 font-bold text-white focus:outline-none"
               type="button"
             >
               Send
-            </button>
+            </Button>
           </div>
         </form>
       </div>
