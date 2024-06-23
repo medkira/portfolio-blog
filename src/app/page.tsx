@@ -280,7 +280,7 @@ const Footer = () => {
           flex-col
           items-center
            overflow-hidden
-          rounded-2xl  bg-[#bffa61] sm:h-[81vh] sm:w-[50vw] sm:justify-center"
+          rounded-2xl  bg-[#bffa61] sm:h-[81vh] sm:w-[45vw] sm:justify-center"
       >
         {/* <Image className="scale-[35%] rounded-full" src={personalImage} /> */}
         <h1

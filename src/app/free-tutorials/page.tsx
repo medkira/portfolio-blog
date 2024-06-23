@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 import { subtitle, title } from '@/components/primitives';
 
-export default function BlogPage() {
+export default function FreeTutorialsPage() {
   useEffect(() => {
     const lenis = new Lenis();
 

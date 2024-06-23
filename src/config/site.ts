@@ -50,7 +50,7 @@ export const siteConfig = {
     // },
     {
       label: 'Contact Me',
-      href: '/Contact',
+      href: '/contact',
     },
 
   ],

@@ -16,7 +16,7 @@ export const title = tv({
     },
     size: {
       sm: 'text-2xl md:text-2xl leading-9 ',
-      md: 'text-3xl sm:text-4xl l:text-5xl',
+      md: 'text-3xl sm:text-4xl lg:text-3xl',
       lg: 'text-[5.5vh]  sm:text-5xl md:text-[3rem] lg:text-5xl xl:text-7xl',
     },
     fullWidth: {
@@ -44,7 +44,7 @@ export const title = tv({
 });
 
 export const subtitle = tv({
-  base: 'w-full  my-2 text-lg lg:text-xl text-default-600 block max-w-1/12',
+  base: 'w-full  my-2 text-lg lg:text-md text-default-600 block max-w-1/12',
   variants: {
     fullWidth: {
       true: '!w-full',
