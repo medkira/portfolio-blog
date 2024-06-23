@@ -28,6 +28,7 @@ export default function ContactPage() {
           mb-[3vh]  mt-[5vh]
           flex
           h-[75vh]
+          min-h-[550px]
           w-[90vw]
           flex-col
            items-center

@@ -271,16 +271,16 @@ const Footer = () => {
   // const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
 
   return (
-    <div className="flex  h-[98vh] w-full items-end justify-center overflow-hidden p-3  sm:p-6 ">
+    <div className="flex   h-[98vh] min-h-[590px] w-full items-end justify-center overflow-hidden p-3  sm:p-6 ">
       <div
         className="relative
           mb-[3vh]  flex
           h-[80vh]
+          min-h-[550px]
           w-[100vw]
           flex-col
-          items-center
-           overflow-hidden
-          rounded-2xl  bg-[#bffa61] sm:h-[81vh] sm:w-[45vw] sm:justify-center"
+           items-center
+          overflow-hidden rounded-2xl  bg-[#bffa61] sm:h-[81vh] sm:w-[70vw] sm:justify-center md:w-[45vw]"
       >
         {/* <Image className="scale-[35%] rounded-full" src={personalImage} /> */}
         <h1
