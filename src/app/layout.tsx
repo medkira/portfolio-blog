@@ -49,10 +49,8 @@ export default function RootLayout({
               <Navbar />
             </div>
             <div className="fixed left-[30px] top-[35px]   z-10 text-[1.35rem] ">
-              <h1> SAIF DHIFI</h1>
-              <p className="-mt-1 text-xs text-zinc-400">
-                Freelancer Video editor
-              </p>
+              <h1> Med Kira</h1>
+              <p className="-mt-1 text-xs text-zinc-400">Software Engineer</p>
             </div>
             <Toaster />
             {/* container z-10 mx-auto max-w-7xl flex-grow bg-transparent px-6 */}

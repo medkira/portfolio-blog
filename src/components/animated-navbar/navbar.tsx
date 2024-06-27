@@ -59,7 +59,7 @@ export const Navbar = () => {
     <div ref={menuRef} className={styles.header}>
       <motion.div
         animate={isActive ? 'open' : 'closed'}
-        className="relative rounded-[25px] bg-[#c9fd74] 
+        className="relative rounded-[25px] bg-[#674086] 
           [--costume-width:75vw] 
          md:[--costume-width:50vw]   
         lg:[--costume-width:30vw]"

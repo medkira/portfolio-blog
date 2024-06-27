@@ -16,14 +16,15 @@
         .el{
             width: 100%;
             height: 100%;
-            background-color: #c9fd74;
+            background-color: #674086 ;
             p{
                 margin: 0px;
             }
             &:nth-of-type(2){
                 background-color: black;
                 p{
-                    color: #c9fd74;
+                    color:#674086 ;
+                    font-weight: bold;
                 }
             }
             &:hover{
@@ -46,6 +47,7 @@
   
   .perspectiveText{
     color: black;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: center;

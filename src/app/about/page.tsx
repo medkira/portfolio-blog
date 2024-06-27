@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { Button } from '@nextui-org/button';
 import Image from 'next/legacy/image';
 
-import personalImage from '../../../public/images/personal-image.jpeg';
+import personalImage from '../../../public/images/personal-image.jpg';
 
 import { title } from '@/components/primitives';
 
