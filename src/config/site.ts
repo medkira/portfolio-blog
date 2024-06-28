@@ -37,8 +37,8 @@ export const siteConfig = {
     },
 
     {
-      label: 'Free Tutorials',
-      href: '/free-tutorials',
+      label: 'Blogs',
+      href: '/blogs',
     },
     {
       label: 'About Me',

@@ -5,9 +5,7 @@ export default function BlogLayout({
 }) {
   return (
     <section className="flex flex-col items-center justify-center ">
-      <div className="inline-block max-w-lg justify-center text-center">
-        {children}
-      </div>
+      <div className="">{children}</div>
     </section>
   );
 }
