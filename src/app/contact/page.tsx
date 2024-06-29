@@ -21,7 +21,7 @@ export default function ContactPage() {
   return (
     <section className="mt-[11vh] flex flex-col items-center  justify-center    sm:mt-[5vh] ">
       <h1 className={title({ className: 'text-white' })}>
-        Contact <span className="text-[#7ef41d]">Me</span>
+        Contact <span className="text-[#674a86]">Me</span>
       </h1>
       <div
         className="relative
@@ -32,7 +32,7 @@ export default function ContactPage() {
           w-[90vw]
           flex-col
            items-center
-          overflow-hidden rounded-2xl  bg-[#bffa61] sm:h-[81vh]  sm:w-[75vw] sm:justify-center  lg:w-[45vw]"
+          overflow-hidden rounded-2xl  bg-[#674a86] sm:h-[81vh]  sm:w-[75vw] sm:justify-center  lg:w-[45vw]"
       >
         {/* <Image className="scale-[35%] rounded-full" src={personalImage} /> */}
         <h1
@@ -50,7 +50,7 @@ export default function ContactPage() {
               Name
             </label>
             <input
-              className="focus:shadow-outline w-full appearance-none rounded-xl border px-3 py-2 leading-tight text-[#c9fd74] shadow focus:outline-none"
+              className="focus:shadow-outline w-full appearance-none rounded-xl border px-3 py-2 leading-tight text-[#674a86] shadow focus:outline-none"
               id="name"
               placeholder="Your name"
               type="text"
@@ -66,7 +66,7 @@ export default function ContactPage() {
             <input
               className="focus:shadow-outline w-full
               appearance-none rounded-xl border px-3 py-2 leading-tight
-               text-[#c9fd74] shadow focus:outline-none"
+               text-[#674a86] shadow focus:outline-none"
               id="email"
               placeholder="Your email"
               type="email"
@@ -80,7 +80,7 @@ export default function ContactPage() {
               Message
             </label>
             <textarea
-              className="focus:shadow-outline w-full appearance-none rounded-xl border px-3 py-2 leading-tight text-[#c9fd74] shadow focus:outline-none"
+              className="focus:shadow-outline w-full appearance-none rounded-xl border px-3 py-2 leading-tight text-[#674a86] shadow focus:outline-none"
               id="message"
               placeholder="Your message"
               rows={4}
