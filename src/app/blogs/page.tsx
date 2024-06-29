@@ -3,9 +3,12 @@
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 
-import { subtitle, title } from '@/components/primitives';
 import { Button } from '@nextui-org/button';
+import { redirect } from 'next/navigation';
+
+import { subtitle, title } from '@/components/primitives';
 import ShineBorder from '@/components/magicui/shine-border';
+import { useRouter } from 'next/navigation';
 
 export default function ProjectsPage() {
   useEffect(() => {
@@ -79,9 +82,14 @@ const ProjectsSection = ({
   subtitleClass: string;
   project: any;
 }) => {
+  const router = useRouter();
+
   return (
-    <ShineBorder className="">
-      <div className="rounded-md bg-gray-700/30 p-5">
+    <ShineBorder>
+      <button
+        className="flex flex-col items-start rounded-md bg-gray-700/30 p-5 sm:pl-5"
+        onClick={() => router.push('/blogs/clean-architecture-implementation')}
+      >
         <h1
           className={title({
             className: 'text-white ',
@@ -91,8 +99,15 @@ const ProjectsSection = ({
           {project.title}
         </h1>
         <p className={subtitleClass}>{project.description}</p>
-        <Button className="mt-3">read more</Button>
-      </div>
+        <Button
+          className="mt-3"
+          onClick={() =>
+            router.push('/blogs/clean-architecture-implementation')
+          }
+        >
+          read more
+        </Button>
+      </button>
     </ShineBorder>
   );
 };
