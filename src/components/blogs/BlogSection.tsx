@@ -15,19 +15,21 @@ export default function BlogSection({
 }) {
   return (
     <ShineBorder>
-      <Link
-        className="flex cursor-pointer flex-col items-start rounded-md bg-gray-700/30 p-5 sm:pl-5"
-        href="/blogs/clean-architecture-implementation"
-      >
-        <h1
-          className={title({
-            className: 'text-white ',
-            size: 'md',
-          })}
+      <div className="rounded-md bg-gray-700/30 p-5 sm:pl-5">
+        <Link
+          className="flex cursor-pointer flex-col items-start "
+          href="/blogs/clean-architecture-implementation"
         >
-          {project.title}
-        </h1>
-        <p className={subtitleClass}>{project.description}</p>
+          <h1
+            className={title({
+              className: 'text-white ',
+              size: 'md',
+            })}
+          >
+            {project.title}
+          </h1>
+          <p className={subtitleClass}>{project.description}</p>
+        </Link>
         <Button
           as={Link}
           className="mt-3"
@@ -35,7 +37,7 @@ export default function BlogSection({
         >
           read more
         </Button>
-      </Link>
+      </div>
     </ShineBorder>
   );
 }
