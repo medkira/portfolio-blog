@@ -67,13 +67,13 @@ const HeroSection = () => {
         <div className="  flex flex-col gap-2 lg:w-[85vw] ">
           <div className=" flex w-full flex-col justify-center  text-center">
             <div className="-mb-2 flex flex-col  items-start  sm:mb-1 ">
-              <h1 className={title({ className: '-mb-0 text-white sm:mb-0' })}>
+              <h1 className={title({ className: '-mb-4 text-white sm:mb-0' })}>
                 Software Engineer.
               </h1>
               <div>
                 <h1
                   className={title({
-                    className: ' mr-3ù text-white sm:mb-0 sm:mr-5',
+                    className: ' mr-3 text-white sm:mb-0 sm:mr-5',
                   })}
                 >
                   Dehmani
