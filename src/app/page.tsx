@@ -66,10 +66,23 @@ const HeroSection = () => {
         {/* </div> */}
         <div className="  flex flex-col gap-2 lg:w-[85vw] ">
           <div className=" flex w-full flex-col justify-center  text-center">
-            <div className="-mb-2 flex  items-start  sm:mb-1 ">
+            <div className="-mb-2 flex flex-col  items-start  sm:mb-1 ">
               <h1 className={title({ className: '-mb-0 text-white sm:mb-0' })}>
                 Software Engineer.
               </h1>
+              <div>
+                <h1
+                  className={title({
+                    className: ' mr-3ù text-white sm:mb-0 sm:mr-5',
+                  })}
+                >
+                  Dehmani
+                </h1>
+                <h1 className={title({ className: ' text-white sm:mb-0 ' })}>
+                  Mohamed.
+                </h1>
+              </div>
+
               {/* <h1 className={title()}>MONTAGES</h1> */}
             </div>
           </div>
