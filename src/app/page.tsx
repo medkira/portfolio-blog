@@ -4,11 +4,13 @@ import Image from 'next/legacy/image';
 import { useEffect } from 'react';
 import Lenis from 'lenis';
 import { Button } from '@nextui-org/react';
+import Link from 'next/link';
 
 import personalImage from '../../public/images/personal-image.jpg';
 
-import { title } from '@/components/primitives';
+import { subtitle, title } from '@/components/primitives';
 import { roboto } from '@/config/fonts';
+import BlogSection from '@/components/blogs/BlogSection';
 
 export default function Home() {
   useEffect(() => {
@@ -83,7 +85,11 @@ const HeroSection = () => {
             </h2>
           </div>
           <div>
-            <Button className="mb-0 mt-2 rounded-lg bg-[#674086] p-7 text-lg font-bold text-black sm:mt-5">
+            <Button
+              as={Link}
+              className="mb-0 mt-2 rounded-lg bg-[#674086] p-7 text-lg font-bold text-black sm:mt-5"
+              href="/contact"
+            >
               CONTACT ME
             </Button>
           </div>
@@ -152,114 +158,28 @@ const Section2Title = () => {
 };
 
 const Section2 = () => {
-  const sections = [
+  const Blogs = [
     {
-      title: 'Lorem ipsums',
-      description: 'description description',
-      image: personalImage,
-    },
-    {
-      title: 'Lorem ipsu',
-      description: 'description description',
-      image: personalImage,
-    },
-    {
-      title: 'Lorem ipsumss',
-      description: 'description description',
-      image: personalImage,
+      title: 'Clean Architecture.',
+      subtitle: '',
+      description:
+        'A Comprehensive Guide to Achieving Decoupled, Maintainable, and Testable Codebases',
     },
   ];
 
   return (
     <div className="flex flex-col  items-start justify-center p-3 sm:p-6  md:flex-row md:gap-5">
-      {sections.map((section) => (
-        <div
-          key={section.title}
-          className="w-full overflow-hidden pb-5 md:w-[33vw]"
-        >
-          <div
-            className="sm:gap-6md relative flex w-full flex-col items-start  gap-4 overflow-hidden rounded-xl
-          bg-[#F5F5F5] px-6 pt-5  md:px-6 lg:flex-col lg:gap-0"
-          >
-            <div className="flex flex-col gap-2">
-              <div className="flex w-full flex-col items-start justify-start text-start">
-                <div className="flex gap-2 pt-5 sm:mb-1">
-                  <h1 className={title({ size: 'md' })}>{section.title}</h1>
-                </div>
-              </div>
-              <div className="flex w-full text-start text-lg font-medium leading-7 text-black sm:text-xl">
-                <h2>{section.description}</h2> {/* Add description if needed */}
-              </div>
-              {/* Add Button or other elements here */}
-            </div>
-            <div className="white mt-2 sm:mt-6">
-              <Image
-                // alt="..." // Add alt text for accessibility
-                className="scale-95 rounded-md object-cover"
-                // height={800} // Set height and width as needed
-                // width={800}
-                src={section.image}
-              />
-            </div>
-          </div>
-        </div>
+      {Blogs.map((project, index) => (
+        <BlogSection
+          key={index}
+          project={project}
+          subtitleClass={subtitle({
+            className:
+              'ml-1 mt-4 text-start leading-6 text-gray-400 sm:mt-0 sm:max-w-[45vw]',
+          })}
+          // titleClass={title({ size: 'md', className: 'text-[#7ef41d]' })}
+        />
       ))}
-      {/*
-      <div className="w-full overflow-hidden md:w-[33vw]  ">
-        <div
-          className="relative
-       flex  w-full flex-col items-start
-      gap-4 overflow-hidden rounded-md
-         bg-[#F5F5F5] px-6 pt-5 sm:flex-row
-          sm:gap-6 md:items-center  md:px-14 lg:flex-col lg:gap-0 "
-        >
-          <div className="flex flex-col gap-2">
-            <div className=" flex w-full flex-col justify-center   text-center">
-              <div className="flex gap-2 pt-5 sm:mb-1 ">
-                <h1 className={title({ size: 'md' })}>Dark colors in 2024</h1>
-              </div>
-            </div>
-            <div className=" flex  w-full text-start  text-lg font-medium leading-7 text-black sm:text-xl  ">
-              <h2>
-                Choosing the right rug for your living space can be hard. It can
-
-              </h2>
-            </div>
-
-          </div>
-          <div className="white mt-14">
-            <Image
-              // alt="Woman listing to music"
-              className=" scale-95 rounded-md object-cover"
-              // height={800}
-              src={section2Image2}
-              // width={800}
-            />
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div className="flex w-full flex-col items-center justify-center  p-5 pt-6 md:w-[33vw]">
-        <div className="w-full  pb-5 text-start">
-          <h1
-            className={title({
-              size: 'md',
-              color: 'white',
-              className: ' text-start',
-            })}
-          >
-            To plant a garden is to believe in tomorrow
-          </h1>
-        </div>
-
-        <h2 className="flex  w-full text-start  text-medium font-medium leading-7 text-white sm:text-xl ">
-          The first step in determining your ideal working hours is to figure
-          out when your mind and body naturally work the best.
-        </h2>
-        <div className="max-w-s flex w-[70vw] items-center justify-center pt-5">
-          <CarouselSize />
-        </div>
-      </div> */}
     </div>
   );
 };
@@ -423,3 +343,39 @@ const Footer = () => {
 //     </div>
 //   );
 // };
+
+// THE BLOGS
+{
+  /* {sections.map((section) => (
+        <div
+          key={section.title}
+          className="w-full overflow-hidden pb-5 md:w-[33vw]"
+        >
+          <div
+            className="sm:gap-6md relative flex w-full flex-col items-start  gap-4 overflow-hidden rounded-xl
+          bg-[#F5F5F5] px-6 pt-5  md:px-6 lg:flex-col lg:gap-0"
+          >
+            <div className="flex flex-col gap-2">
+              <div className="flex w-full flex-col items-start justify-start text-start">
+                <div className="flex gap-2 pt-5 sm:mb-1">
+                  <h1 className={title({ size: 'md' })}>{section.title}</h1>
+                </div>
+              </div>
+              <div className="flex w-full text-start text-lg font-medium leading-7 text-black sm:text-xl">
+                <h2>{section.description}</h2> 
+              </div>
+        
+            </div>
+            <div className="white mt-2 sm:mt-6">
+              <Image
+                // alt="..." // Add alt text for accessibility
+                className="scale-95 rounded-md object-cover"
+                // height={800} // Set height and width as needed
+                // width={800}
+                src={section.image}
+              />
+            </div>
+          </div>
+        </div>
+      ))} */
+}

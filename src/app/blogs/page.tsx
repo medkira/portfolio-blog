@@ -2,13 +2,12 @@
 
 import Lenis from 'lenis';
 import { useEffect } from 'react';
-
 import { Button } from '@nextui-org/button';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 import { subtitle, title } from '@/components/primitives';
 import ShineBorder from '@/components/magicui/shine-border';
-import { useRouter } from 'next/navigation';
+import BlogSection from '@/components/blogs/BlogSection';
 
 export default function ProjectsPage() {
   useEffect(() => {
@@ -58,7 +57,7 @@ export default function ProjectsPage() {
       <h1 className={title({ className: 'text-white' })}>Blogs</h1>
       <div className="flex items-center justify-end  space-y-10 p-5  sm:mt-16 sm:w-[55vw]  sm:p-0 ">
         {Projects.map((project, index) => (
-          <ProjectsSection
+          <BlogSection
             key={index}
             project={project}
             subtitleClass={subtitle({
@@ -73,44 +72,44 @@ export default function ProjectsPage() {
   );
 }
 
-const ProjectsSection = ({
-  // titleClass,
-  subtitleClass,
-  project,
-}: {
-  // titleClass: string;
-  subtitleClass: string;
-  project: any;
-}) => {
-  const router = useRouter();
+// const BlogSection = ({
+//   // titleClass,
+//   subtitleClass,
+//   project,
+// }: {
+//   // titleClass: string;
+//   subtitleClass: string;
+//   project: any;
+// }) => {
+//   const router = useRouter();
 
-  return (
-    <ShineBorder>
-      <button
-        className="flex flex-col items-start rounded-md bg-gray-700/30 p-5 sm:pl-5"
-        onClick={() => router.push('/blogs/clean-architecture-implementation')}
-      >
-        <h1
-          className={title({
-            className: 'text-white ',
-            size: 'md',
-          })}
-        >
-          {project.title}
-        </h1>
-        <p className={subtitleClass}>{project.description}</p>
-        <Button
-          className="mt-3"
-          onClick={() =>
-            router.push('/blogs/clean-architecture-implementation')
-          }
-        >
-          read more
-        </Button>
-      </button>
-    </ShineBorder>
-  );
-};
+//   return (
+//     <ShineBorder>
+//       <button
+//         className="flex flex-col items-start rounded-md bg-gray-700/30 p-5 sm:pl-5"
+//         onClick={() => router.push('/blogs/clean-architecture-implementation')}
+//       >
+//         <h1
+//           className={title({
+//             className: 'text-white ',
+//             size: 'md',
+//           })}
+//         >
+//           {project.title}
+//         </h1>
+//         <p className={subtitleClass}>{project.description}</p>
+//         <Button
+//           className="mt-3"
+//           onClick={() =>
+//             router.push('/blogs/clean-architecture-implementation')
+//           }
+//         >
+//           read more
+//         </Button>
+//       </button>
+//     </ShineBorder>
+//   );
+// };
 
 {
   /* <div className="my-5 flex w-fit flex-col items-center justify-center rounded-2xl bg-transparent  p-3 sm:my-0 sm:p-6  lg:w-[35vw] ">

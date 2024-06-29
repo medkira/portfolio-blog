@@ -31,10 +31,10 @@ export const siteConfig = {
       label: 'Home',
       href: '/',
     },
-    {
-      label: 'Projects',
-      href: '/projects',
-    },
+    // {
+    //   label: 'Projects',
+    //   href: '/projects',
+    // },
 
     {
       label: 'Blogs',
