@@ -44,13 +44,13 @@ export const siteConfig = {
       label: 'About Me',
       href: '/about',
     },
-    // {
-    //   label: 'Careers',
-    //   href: '/Careers',
-    // },
     {
       label: 'Contact Me',
       href: '/contact',
+    },
+    {
+      label: 'Resume',
+      href: 'https://drive.google.com/file/d/1uAMNAiAjfMnzgzNuZnNx8CXH4_QAmQYY/view',
     },
 
   ],

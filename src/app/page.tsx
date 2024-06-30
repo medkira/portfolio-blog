@@ -11,6 +11,7 @@ import personalImage from '../../public/images/personal-image.jpg';
 import { subtitle, title } from '@/components/primitives';
 import { roboto } from '@/config/fonts';
 import BlogSection from '@/components/blogs/BlogSection';
+import ArrowButtonAnimation from '@/components/animated-buttons/arrow-button/ArrowButton';
 
 export default function Home() {
   useEffect(() => {
@@ -97,14 +98,15 @@ const HeroSection = () => {
               efficient code.
             </h2>
           </div>
-          <div>
+          <div className="flex items-center justify-center sm:block">
             <Button
               as={Link}
-              className="mb-0 mt-2 rounded-lg bg-[#674086] p-7 text-lg font-bold text-black sm:mt-5"
+              className="mb-0 mr-5 mt-2 rounded-lg bg-[#674086] p-7 text-lg font-bold text-black sm:mt-5"
               href="/contact"
             >
               CONTACT ME
             </Button>
+            <ArrowButtonAnimation text="Resume" />
           </div>
         </div>
       </div>

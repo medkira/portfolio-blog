@@ -9,6 +9,7 @@ import { Providers } from './providers';
 import { Toaster } from '@/components/ui/toaster';
 import { siteConfig } from '@/config/site';
 import { roboto } from '@/config/fonts';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: {
@@ -48,10 +49,13 @@ export default function RootLayout({
             <div className="fixed left-0 right-0 top-0 z-20 ">
               <Navbar />
             </div>
-            <div className="fixed left-[30px] top-[35px]   z-10 text-[1.35rem] ">
+            <Link
+              className="fixed left-[30px] top-[35px]   z-10 text-[1.35rem] "
+              href={'/'}
+            >
               <h1> Med Kira</h1>
               <p className="-mt-1 text-xs text-zinc-400">Software Engineer</p>
-            </div>
+            </Link>
             <Toaster />
             {/* container z-10 mx-auto max-w-7xl flex-grow bg-transparent px-6 */}
             <main>{children}</main>
