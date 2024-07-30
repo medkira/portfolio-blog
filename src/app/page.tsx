@@ -12,7 +12,7 @@ import { subtitle, title } from '@/components/primitives';
 import { roboto } from '@/config/fonts';
 import BlogSection from '@/components/blogs/BlogSection';
 import ArrowButtonAnimation from '@/components/animated-buttons/arrow-button/ArrowButton';
-
+// cons;
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
