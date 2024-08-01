@@ -8,7 +8,7 @@ export default function ArrowButtonAnimation({ text }: { text: string }) {
     <Button
       as={Link}
       className={styles.learnMore}
-      href="https://drive.google.com/file/d/1cNAUaRFC9BX6eG6Yn4eR4pouWCGMzVYV/view?usp=sharing"
+      href="https://drive.google.com/file/d/1445FfCwD5FerKs2ciorSEUgHT8wm01-6/view?usp=sharing"
       target="_blanck"
     >
       <span aria-hidden="true" className={styles.circle}>

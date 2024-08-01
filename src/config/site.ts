@@ -50,7 +50,7 @@ export const siteConfig = {
     },
     {
       label: 'Resume',
-      href: 'https://drive.google.com/file/d/1cNAUaRFC9BX6eG6Yn4eR4pouWCGMzVYV/view?usp=sharing',
+      href: 'https://drive.google.com/file/d/1445FfCwD5FerKs2ciorSEUgHT8wm01-6/view?usp=sharing',
     },
 
   ],
